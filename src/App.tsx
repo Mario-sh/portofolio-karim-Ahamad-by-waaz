@@ -9,6 +9,15 @@ import Contact from "./components/Contact";
 import Notification from "./components/Notification";
 import SiteLoader from "./components/SiteLoader";
 
+// Import images to allow Vite to resolve them natively in production
+import urTalentsImg from "./assets/images/ur_talents_brand_1780447860112.png";
+import stationeryImg from "./assets/images/stationery_brand_1780447875152.png";
+import webUIImg from "./assets/images/web_interface_ui_1780447892077.png";
+import pizzaImg from "./assets/images/pizza_flyer_poster_1780447907749.png";
+import wLogoImg from "./assets/images/letter_w_logo_1780447923346.png";
+import responsiveWebImg from "./assets/images/responsive_web_mockup_1780447939389.png";
+import portraitImg from "./assets/images/kazim_portrait_1780447843170.png";
+
 interface Toast {
   id: string;
   message: string;
@@ -20,17 +29,17 @@ export default function App() {
   const [siteLoading, setSiteLoading] = useState(true);
   const [toasts, setToasts] = useState<Toast[]>([]);
 
-  // Generated Asset File Paths
+  // Generated Asset File Paths resolved by Vite's import engine
   const portfolioImages = {
-    urTalents: "/src/assets/images/ur_talents_brand_1780447860112.png",
-    stationery: "/src/assets/images/stationery_brand_1780447875152.png",
-    webUI: "/src/assets/images/web_interface_ui_1780447892077.png",
-    pizza: "/src/assets/images/pizza_flyer_poster_1780447907749.png",
-    wLogo: "/src/assets/images/letter_w_logo_1780447923346.png",
-    responsiveWeb: "/src/assets/images/responsive_web_mockup_1780447939389.png",
+    urTalents: urTalentsImg,
+    stationery: stationeryImg,
+    webUI: webUIImg,
+    pizza: pizzaImg,
+    wLogo: wLogoImg,
+    responsiveWeb: responsiveWebImg,
   };
 
-  const portraitUrl = "/src/assets/images/kazim_portrait_1780447843170.png";
+  const portraitUrl = portraitImg;
 
   const addToast = (message: string, type: "success" | "error" | "info" = "success") => {
     const id = Date.now().toString();
