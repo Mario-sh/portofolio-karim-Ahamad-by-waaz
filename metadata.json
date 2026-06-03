@@ -1,0 +1,6 @@
+{
+  "name": "Kazim Ahmad Portfolio",
+  "description": "Portfolio de Kazim Ahmad - Graphic Designer, Web Developer, and Video Editor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
